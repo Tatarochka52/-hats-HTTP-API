@@ -14,7 +14,7 @@ classDiagram
     class User
     User : int user_id
     User : string username
-    User : dstetime created_at
+    User : datetime created_at
     
     
 classDiagram
@@ -22,7 +22,7 @@ classDiagram
     Chat : int chat_id
     Chat : string chatname
     Chat : int users
-    Chat : dstetime created_at
+    Chat : datetime created_at
     
     
 classDiagram
