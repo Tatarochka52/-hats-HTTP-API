@@ -6,3 +6,36 @@
 ____  
 <a name="0"></a>
 ## Инструкция по запуску приложения
+____  
+
+```mermaid
+
+classDiagram
+    class User
+    User : int user_id
+    User : string username
+    User : dstetime created_at
+    
+    
+classDiagram
+    class Chat
+    Chat : int chat_id
+    Chat : string chatname
+    Chat : int users
+    Chat : dstetime created_at
+    
+    
+classDiagram
+    class Message
+    Message : int message_id
+    Message : int chat_id
+    Message : int author_id
+    Message : varchar(5000) text
+    Message : datetime created_at
+    
+    
+classDiagram
+    User <--> Message
+    Chat <-->
+
+```
