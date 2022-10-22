@@ -31,8 +31,14 @@ classDiagram
     Message : varchar(5000) text  
     Message : datetime created_at
     
-    User <--> Message  
-    Chat <--> Message  
+    class Relation  
+    Relation : id
+    Relation : int chat_id  
+    Relation : int author_id
+    
+    User <--> Relation  
+    Chat <--> Relation 
+    Messagw <--> Relation
 
 ```
 ____
