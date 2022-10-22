@@ -10,32 +10,32 @@ ____
 
 ```mermaid
 
-classDiagram
-    class User
-    User : int user_id
-    User : string username
-    User : datetime created_at
+classDiagram  
+    class User  
+    User : int user_id  
+    User : string username  
+    User : datetime created_at  
     
     
-classDiagram
-    class Chat
-    Chat : int chat_id
-    Chat : string chatname
-    Chat : int users
-    Chat : datetime created_at
+classDiagram  
+    class Chat  
+    Chat : int chat_id  
+    Chat : string chatname  
+    Chat : int users  
+    Chat : datetime created_at  
     
     
-classDiagram
-    class Message
-    Message : int message_id
-    Message : int chat_id
-    Message : int author_id
-    Message : varchar(5000) text
-    Message : datetime created_at
+classDiagram  
+    class Message  
+    Message : int message_id  
+    Message : int chat_id  
+    Message : int author_id  
+    Message : varchar(5000) text  
+    Message : datetime created_at  
     
     
-classDiagram
-    User <--> Message
-    Chat <-->
+classDiagram  
+    User <--> Message  
+    Chat <--> Message  
 
 ```
