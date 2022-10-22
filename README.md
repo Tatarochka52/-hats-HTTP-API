@@ -38,7 +38,7 @@ classDiagram
     
     User <--> Relation  
     Chat <--> Relation 
-    Messagw <--> Relation
+    Message <--> Relation
 
 ```
 ____
