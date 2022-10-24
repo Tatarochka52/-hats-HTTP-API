@@ -6,6 +6,6 @@ function CreateRelationTable(dbClient){
                         UNIQUE(UsersId, ChatId)
                     )`)
                     .catch(e => console.error(e.stack));
-};
+}
 
 module.exports.CreateRelationTable = CreateRelationTable;

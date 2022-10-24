@@ -2,11 +2,13 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 
-var { db_initial } = require("./db_manage/database/db_init");
+var { dbInitial } = require("./db_manage/database/db_init");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var chatsRouter = require('./routes/chats');
+var messagesRouter = require('./routes/messages');
 
-global.dbClient = db_initial();
+global.dbClient = dbInitial();
 
 var app = express();
 
@@ -21,6 +23,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/chats', chatsRouter);
+app.use('/messages', messagesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

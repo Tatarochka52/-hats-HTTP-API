@@ -1,8 +1,10 @@
-var { db_connection } = require("./db_connect");
+var { dbConnection } = require("./db_connect");
+var { CreateTables } = require("./create_tables");
 
-function db_initial(){
-    let dbClient = db_connection();
+function dbInitial(){
+    let dbClient = dbConnection();
+    CreateTables(dbClient);
     return dbClient;
 }
 
-module.exports.db_initial = db_initial;
+module.exports.dbInitial = dbInitial;

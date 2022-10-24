@@ -4,9 +4,9 @@ function CreateMessageTable(dbClient){
                         Chat INTEGER NOT NULL REFERENCES Chat (Id),
                         Author INTEGER NOT NULL REFERENCES Users (Id),
                         Text VARCHAR(4096),
-                        CreatedAt DATETIME
+                        CreatedAt TIMESTAMP
                     )`)
                     .catch(e => console.error(e.stack));
-};
+}
 
 module.exports.CreateMessageTable = CreateMessageTable;

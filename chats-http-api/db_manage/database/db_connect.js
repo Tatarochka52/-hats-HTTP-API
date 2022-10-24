@@ -1,6 +1,6 @@
 const { Client } = require('pg');
 
-function db_connection(){
+function dbConnection(){
     const client = new Client({
         user: 'postgres',
         host: 'localhost',
@@ -12,4 +12,4 @@ function db_connection(){
       return client;
 }
 
-module.exports.db_connection = db_connection;
+module.exports.dbConnection = dbConnection;
